@@ -19,7 +19,7 @@ header {
 }
 
 .logo {
-    width: 150px;
+    width: 75px; /* Reduced size */
     border-radius: 10px;
 }
 
@@ -27,16 +27,16 @@ header {
 main {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px; /* Reduced gap */
     margin-top: 50px;
 }
 
 /* Product Styling */
 .product {
     background-color: #222;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
-    width: 250px;
+    width: 150px; /* Reduced width */
     text-align: center;
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
 }
@@ -47,18 +47,18 @@ main {
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 18px; /* Smaller font size */
     margin: 10px 0;
 }
 
 button {
     background-color: #00FF00; /* Neon green */
     border: none;
-    padding: 10px 20px;
+    padding: 8px 16px; /* Smaller padding */
     color: #111;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 10px;
     transition: all 0.3s ease;
 }
