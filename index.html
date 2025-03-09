@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Website</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Futuristic Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Welcome to My Website</h1>
-  <button id="payNow">Pay Now</button>
+    <header>
+        <img src="your-logo.jpg" alt="Logo" class="logo">
+    </header>
 
-  <script src="app.js"></script>
+    <main>
+        <section class="product">
+            <img src="product1.jpg" alt="Product 1" class="product-img">
+            <h2>Product 1</h2>
+            <p>Description of product 1.</p>
+            <button onclick="buyProduct('Product 1')">Buy Now</button>
+        </section>
+
+        <section class="product">
+            <img src="product2.jpg" alt="Product 2" class="product-img">
+            <h2>Product 2</h2>
+            <p>Description of product 2.</p>
+            <button onclick="buyProduct('Product 2')">Buy Now</button>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 My Company</p>
+    </footer>
+    
+    <script src="app.js"></script>
 </body>
 </html>
