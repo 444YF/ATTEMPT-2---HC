@@ -1,6 +1,6 @@
 document.getElementById('payNow').addEventListener('click', async () => {
   try {
-    const response = await fetch('https://444yf.github.io/ATTEMPT-2---HC/create-payment-link', {
+    const response = await fetch('attempt-2-hc-production.up.railway.app', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
