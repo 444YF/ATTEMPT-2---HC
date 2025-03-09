@@ -9,12 +9,14 @@ body {
 }
 
 header {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .logo {
-    width: 150px; /* Adjust the logo size as needed */
+    width: 120px; /* Adjusted for better visibility */
     height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Product Styling */
@@ -22,7 +24,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 50px;
     margin-top: 50px;
 }
 
@@ -34,10 +36,11 @@ header {
 }
 
 .product img {
-    width: 200px; /* Ensure the product images are the same size */
-    height: 200px;
+    width: 180px; /* Smaller size for uniformity */
+    height: 180px;
     object-fit: cover;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px; /* Optional: Adds rounded corners */
 }
 
 .product button {
@@ -45,7 +48,7 @@ header {
     color: black;
     border: none;
     padding: 10px 20px;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
