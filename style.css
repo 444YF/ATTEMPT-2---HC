@@ -13,17 +13,17 @@ header {
 }
 
 .logo {
-    width: 200px;
+    width: 150px; /* Adjust the logo size as needed */
     height: auto;
 }
 
 /* Product Styling */
 .products {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    margin-top: 50px;
     gap: 30px;
+    margin-top: 50px;
 }
 
 .product {
@@ -34,7 +34,7 @@ header {
 }
 
 .product img {
-    width: 200px;
+    width: 200px; /* Ensure the product images are the same size */
     height: 200px;
     object-fit: cover;
     margin-bottom: 20px;
