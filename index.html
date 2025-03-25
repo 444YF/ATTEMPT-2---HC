@@ -14,12 +14,47 @@
     <div class="products">
         <div class="product">
             <img src="product1.jpeg" alt="Product 1">
-            <button>Buy Now</button>
+            <button class="buy-now" data-product="product1">Buy Now</button>
+            <p class="payment-link"></p> <!-- Placeholder for the payment link -->
         </div>
         <div class="product">
             <img src="product2.jpeg" alt="Product 2">
-            <button>Buy Now</button>
+            <button class="buy-now" data-product="product2">Buy Now</button>
+            <p class="payment-link"></p>
         </div>
     </div>
+
+    <script>
+        document.querySelectorAll(".buy-now").forEach(button => {
+            button.addEventListener("click", async (event) => {
+                const product = event.target.getAttribute("data-product");
+                
+                try {
+                    const response = await fetch("http://localhost:3000/create-payment-link", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                            order_id: product + "_" + Date.now(),
+                            amount: 15.02,  // Modify this if each product has a different price
+                            currency: "gbp"
+                        })
+                    });
+
+                    const data = await response.json();
+                    if (data.paymentLink) {
+                        event.target.nextElementSibling.innerHTML = 
+                            `<a href="${data.paymentLink}" target="_blank">Pay Now</a>`;
+                    } else {
+                        event.target.nextElementSibling.innerText = "Failed to generate payment link.";
+                    }
+                } catch (error) {
+                    console.error("Error:", error);
+                    event.target.nextElementSibling.innerText = "Error generating payment link.";
+                }
+            });
+        });
+    </script>
 </body>
 </html>
